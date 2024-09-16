@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Profile showcasing skills, projects, awards, certifications, and more.">
+    <meta name="keywords" content="Professional Profile, Freelance, Portfolio, Awards, Certifications, Projects">
+    <meta name="author" content="Your Name">
+    <title>Professional Profile</title>
+
+    <!-- Stylesheet for responsive, mobile-first design -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications & Awards</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Switch Language Button -->
+            <li>
+                <button id="language-switcher">Switch Language</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Mobile First: Hero Section -->
+    <section id="hero">
+        <h1 id="welcome-message">Welcome to My Professional Profile</h1>
+        <p id="hero-description">I am a passionate professional with a blend of technical and soft skills, working on exciting projects across the globe.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p id="about-description">I am a freelance web developer with over 5 years of experience.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div>
+                <h3>Hard Skills</h3>
+                <ul id="hard-skills">
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>Python, Java</li>
+                    <li>Database Management (SQL, NoSQL)</li>
+                    <li>Cloud Computing (AWS, Azure)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Soft Skills</h3>
+                <ul id="soft-skills">
+                    <li>Communication</li>
+                    <li>Problem-solving</li>
+                    <li>Time Management</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul id="projects-list">
+            <li>Project A - <em>January 2023</em></li>
+            <li>Project B - <em>March 2022</em></li>
+            <li>Project C - <em>September 2021</em></li>
+        </ul>
+    </section>
+
+    <!-- Certifications, Awards & Trainings Section -->
+    <section id="certifications">
+        <h2>Certifications & Awards</h2>
+        <ul id="certifications-list">
+            <li>AWS Certified Solutions Architect - 2022</li>
+            <li>Google Cloud Certification - 2021</li>
+            <li>Best Freelancer Award - 2020</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <h3>Degrees</h3>
+        <ul id="degrees-list">
+            <li>Bachelor's in Computer Science - 2019</li>
+        </ul>
+
+        <h3>Short Courses</h3>
+        <ul id="short-courses-list">
+            <li>Data Science - 2021</li>
+            <li>Full Stack Web Development - 2020</li>
+        </ul>
+
+        <h3>Hackathons & Side Projects</h3>
+        <ul id="hackathons-list">
+            <li>Hackathon XYZ - Winner, 2023</li>
+            <li>Open Source Contribution - Maintainer, 2022</li>
+        </ul>
+    </section>
+
+    <!-- Social Media Feed Section -->
+    <section id="social">
+        <h2>Social Media Feed</h2>
+        <div id="twitter-feed">
+            <!-- Twitter feed integration -->
+            <a class="twitter-timeline" href="https://twitter.com/your_handle">Tweets by @your_handle</a>
+        </div>
+    </section>
+
+    <!-- Video Content Section -->
+    <section id="video-content">
+        <h2>Watch My Work</h2>
+        <video controls>
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your LinkedIn</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for language switching -->
+    <script>
+        const translations = {
+            en: {
+                welcomeMessage: "Welcome to My Professional Profile",
+                heroDescription: "I am a passionate professional with a blend of technical and soft skills, working on exciting projects across the globe.",
+                aboutDescription: "I am a freelance web developer with over 5 years of experience.",
+                hardSkills: [
+                    "Web Development (HTML, CSS, JavaScript)",
+                    "Python, Java",
+                    "Database Management (SQL, NoSQL)",
+                    "Cloud Computing (AWS, Azure)"
+                ],
+                softSkills: [
+                    "Communication",
+                    "Problem-solving",
+                    "Time Management",
+                    "Leadership"
+                ]
+            },
+            fr: {
+                welcomeMessage: "Bienvenue sur mon profil professionnel",
+                heroDescription: "Je suis un professionnel passionné avec un mélange de compétences techniques et personnelles, travaillant sur des projets passionnants à travers le monde.",
+                aboutDescription: "Je suis un développeur web freelance avec plus de 5 ans d'expérience.",
+                hardSkills: [
+                    "Développement Web (HTML, CSS, JavaScript)",
+                    "Python, Java",
+                    "Gestion de bases de données (SQL, NoSQL)",
+                    "Cloud Computing (AWS, Azure)"
+                ],
+                softSkills: [
+                    "Communication",
+                    "Résolution de problèmes",
+                    "Gestion du temps",
+                    "Leadership"
+                ]
+            },
+            ar: {
+                welcomeMessage: "مرحبًا بكم في ملفي الشخصي",
+                heroDescription: "أنا محترف شغوف بمهارات تقنية وشخصية، وأعمل على مشاريع مثيرة في جميع أنحاء العالم.",
+                aboutDescription: "أنا مطور ويب مستقل ولدي أكثر من 5 سنوات من الخبرة.",
+                hardSkills: [
+                    "تطوير الويب (HTML، CSS، JavaScript)",
+                    "بايثون، جافا",
+                    "إدارة قواعد البيانات (SQL، NoSQL)",
+                    "الحوسبة السحابية (AWS، Azure)"
+                ],
+                softSkills: [
+                    "التواصل",
+                    "حل المشكلات",
+                    "إدارة الوقت",
+                    "القيادة"
+                ]
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        document.getElementById('language-switcher').addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'en' ? 'fr' : (currentLanguage === 'fr' ? 'ar' : 'en');
+            updateLanguage();
+        });
+
+        function updateLanguage() {
+            const langContent = translations[currentLanguage];
+            document.getElementById('welcome-message').textContent = langContent.welcomeMessage;
+            document.getElementById('hero-description').textContent = langContent.heroDescription;
+            document.getElementById('about-description').textContent = langContent.aboutDescription;
+
+            updateListContent('hard-skills', langContent.hardSkills);
+            updateListContent('soft-skills', langContent.softSkills);
+        }
+
+        function updateListContent(listId, items) {
+            const listElement = document.getElementById(listId);
+            listElement.innerHTML = ''; // Clear existing content
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                listElement.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
