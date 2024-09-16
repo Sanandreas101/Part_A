@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Profile showcasing skills, projects, awards, certifications, and more.">
+    <meta name="keywords" content="Professional Profile, Freelance, Portfolio, Awards, Certifications, Projects">
+    <meta name="author" content="Your Name">
+    <title>Professional Profile</title>
+
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Responsive design, mobile-first */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero section */
+        #hero {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Section headers */
+        section {
+            padding: 1.5rem;
+        }
+
+        h2 {
+            color: #0073e6;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills, Projects, Certifications */
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        @media (min-width: 768px) {
+            /* Styles for larger screens */
+            nav ul {
+                display: flex;
+            }
+            li {
+                margin-right: 2rem;
+            }
+
+            #hero h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul id="navbar"></ul>
+        <button id="language-switcher">Switch Language</button>
+    </nav>
+
+    <!-- Sections populated by JavaScript -->
+    <main>
+        <section id="hero"></section>
+        <section id="about"></section>
+        <section id="skills"></section>
+        <section id="projects"></section>
+        <section id="certifications"></section>
+        <section id="education"></section>
+        <section id="social"></section>
+        <section id="video-content"></section>
+        <section id="contact"></section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for populating content -->
+    <script>
+        // Data object holding all content for the profile
+        const profileData = {
+            en: {
+                navbar: ["About Me", "Skills", "Projects", "Certifications & Awards", "Education", "Contact"],
+                hero: {
+                    title: "Welcome to My Professional Profile",
+                    description: "I am a passionate professional with a blend of technical and soft skills, working on exciting projects across the globe."
+                },
+                about: "I am a freelance web developer with over 5 years of experience.",
+                skills: {
+                    hardSkills: ["Web Development (HTML, CSS, JavaScript)", "Python, Java", "Database Management (SQL, NoSQL)", "Cloud Computing (AWS, Azure)"],
+                    softSkills: ["Communication", "Problem-solving", "Time Management", "Leadership"]
+                },
+                projects: ["Project A - January 2023", "Project B - March 2022", "Project C - September 2021"],
+                certifications: ["AWS Certified Solutions Architect - 2022", "Google Cloud Certification - 2021", "Best Freelancer Award - 2020"],
+                education: {
+                    degrees: ["Bachelor's in Computer Science - 2019"],
+                    shortCourses: ["Data Science - 2021", "Full Stack Web Development - 2020"],
+                    hackathons: ["Hackathon XYZ - Winner, 2023", "Open Source Contribution - Maintainer, 2022"]
+                },
+                social: "Twitter feed integration coming soon.",
+                video: "Watch My Work",
+                contact: {
+                    email: "your.email@example.com",
+                    linkedin: "https://linkedin.com/in/yourprofile"
+                }
+            },
+            fr: {
+                navbar: ["À propos de moi", "Compétences", "Projets", "Certifications et Récompenses", "Éducation", "Contact"],
+                hero: {
+                    title: "Bienvenue sur mon profil professionnel",
+                    description: "Je suis un professionnel passionné, avec un mélange de compétences techniques et humaines, travaillant sur des projets passionnants à travers le monde."
+                },
+                about: "Je suis un développeur web freelance avec plus de 5 ans d'expérience.",
+                skills: {
+                    hardSkills: ["Développement Web (HTML, CSS, JavaScript)", "Python, Java", "Gestion de base de données (SQL, NoSQL)", "Cloud Computing (AWS, Azure)"],
+                    softSkills: ["Communication", "Résolution de problèmes", "Gestion du temps", "Leadership"]
+                },
+                projects: ["Projet A - Janvier 2023", "Projet B - Mars 2022", "Projet C - Septembre 2021"],
+                certifications: ["AWS Architecte Solutions Certifié - 2022", "Certification Google Cloud - 2021", "Prix du Meilleur Freelance - 2020"],
+                education: {
+                    degrees: ["Licence en Informatique - 2019"],
+                    shortCourses: ["Data Science - 2021", "Développement Web Full Stack - 2020"],
+                    hackathons: ["Hackathon XYZ - Gagnant, 2023", "Contribution Open Source - Mainteneur, 2022"]
+                },
+                social: "Flux Twitter à venir.",
+                video: "Regardez mon travail",
+                contact: {
+                    email: "votre.email@example.com",
+                    linkedin: "https://linkedin.com/in/votreprofil"
+                }
+            },
+            ar: {
+                navbar: ["نبذة عني", "المهارات", "المشاريع", "الشهادات والجوائز", "التعليم", "الاتصال"],
+                hero: {
+                    title: "مرحبًا بكم في ملفي الشخصي المهني",
+                    description: "أنا محترف شغوف بمزيج من المهارات الفنية والناعمة، أعمل على مشاريع مثيرة في جميع أنحاء العالم."
+                },
+                about: "أنا مطور ويب مستقل مع أكثر من 5 سنوات من الخبرة.",
+                skills: {
+                    hardSkills: ["تطوير الويب (HTML, CSS, JavaScript)", "Python, Java", "إدارة قواعد البيانات (SQL, NoSQL)", "الحوسبة السحابية (AWS, Azure)"],
+                    softSkills: ["التواصل", "حل المشكلات", "إدارة الوقت", "القيادة"]
+                },
+                projects: ["المشروع أ - يناير 2023", "المشروع ب - مارس 2022", "المشروع ج - سبتمبر 2021"],
+                certifications: ["مهندس حلول AWS معتمد - 2022", "شهادة Google Cloud - 2021", "جائزة أفضل مستقل - 2020"],
+                education: {
+                    degrees: ["بكالوريوس في علوم الكمبيوتر - 2019"],
+                    shortCourses: ["علوم البيانات - 2021", "تطوير الويب الشامل - 2020"],
+                    hackathons: ["هاكاثون XYZ - الفائز، 2023", "مساهمة المصدر المفتوح - مدير، 2022"]
+                },
+                social: "تغذية تويتر ستأتي قريبًا.",
+                video: "شاهد عملي",
+                contact: {
+                    email: "your.email@example.com",
+                    linkedin: "https://linkedin.com/in/yourprofile"
+                }
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        // Function to populate the navigation bar
+        function populateNavbar() {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = '';
+            profileData[currentLanguage].navbar.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#${item.toLowerCase().replace(/\s/g, '')}">${item}</a>`;
+                navbar.appendChild(li);
+            });
+        }
+
+        // Function to populate the Hero Section
+        function populateHero() {
+            const hero = document.getElementById('hero');
+            hero.innerHTML = `
+                <h1>${profileData[currentLanguage].hero.title}</h1>
+                <p>${profileData[currentLanguage].hero.description}</p>
+            `;
+        }
+
+        // Function to populate the About Section
+        function populateAbout() {
+            const about = document.getElementById('about');
+            about.innerHTML = `<p>${profileData[currentLanguage].about}</p>`;
+        }
+
+        // Function to populate the Skills Section
+        function populateSkills() {
+            const skills = document.getElementById('skills');
+            const { hardSkills, softSkills } = profileData[currentLanguage].skills;
+            skills.innerHTML = `
+                <h2>Skills</h2>
+                <div>
+                    <h3>Hard Skills</h3>
+                    <ul>${hardSkills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <ul>${softSkills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+                </div>
+            `;
+        }
+
+        // Function to populate Projects
+        function populateProjects() {
+            const projects = document.getElementById('projects');
+            projects.innerHTML = `
+                <h2>Projects</h2>
+                <ul>${profileData[currentLanguage].projects.map(project => `<li>${project}</li>`).join('')}</ul>
+            `;
+        }
+
+        // Function to populate Certifications and Awards
+        function populateCertifications() {
+            const certifications = document.getElementById('certifications');
+            certifications.innerHTML = `
+                <h2>Certifications & Awards</h2>
+                <ul>${profileData[currentLanguage].certifications.map(cert => `<li>${cert}</li>`).join('')}</ul>
+            `;
+        }
+
+        // Function to populate Education
+        function populateEducation() {
+            const education = document.getElementById('education');
+            const { degrees, shortCourses, hackathons } = profileData[currentLanguage].education;
+            education.innerHTML = `
+                <h2>Education</h2>
+                <h3>Degrees</h3>
+                <ul>${degrees.map(degree => `<li>${degree}</li>`).join('')}</ul>
+                <h3>Short Courses</h3>
+                <ul>${shortCourses.map(course => `<li>${course}</li>`).join('')}</ul>
+                <h3>Hackathons & Side Projects</h3>
+                <ul>${hackathons.map(hack => `<li>${hack}</li>`).join('')}</ul>
+            `;
+        }
+
+        // Function to populate Contact
+        function populateContact() {
+            const contact = document.getElementById('contact');
+            const { email, linkedin } = profileData[currentLanguage].contact;
+            contact.innerHTML = `
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:${email}">${email}</a></p>
+                <p>LinkedIn: <a href="${linkedin}">LinkedIn</a></p>
+            `;
+        }
+
+        // Populate all content sections
+        function populateContent() {
+            populateNavbar();
+            populateHero();
+            populateAbout();
+            populateSkills();
+            populateProjects();
+            populateCertifications();
+            populateEducation();
+            populateContact();
+        }
+
+        // Language switcher functionality
+        document.getElementById('language-switcher').addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'en' ? 'fr' : (currentLanguage === 'fr' ? 'ar' : 'en');
+            populateContent();
+        });
+
+        // Initialize content on page load
+        populateContent();
+    </script>
+</body>
+</html>
